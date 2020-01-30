@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 function App() {
   return <h1>Learn Kana</h1>;
