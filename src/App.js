@@ -1,12 +1,13 @@
 import React from 'react';
-import GlobalStyle from './styles/global';
+import GlobalStyle, { AppContainer } from './styles/global';
+import Navbar from './components/Navbar';
 
 const App = () => {
   return (
-    <>
-      <h1>Learn Kana</h1>
+    <AppContainer>
+      <Navbar />
       <GlobalStyle />
-    </>
+    </AppContainer>
   );
 };
 
