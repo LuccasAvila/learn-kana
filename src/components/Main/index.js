@@ -4,7 +4,9 @@ import kanaList from '../../utils/kana';
 
 const Main = () => {
     const [kana, setKana] = useState('');
+    const [kanaInput, setKanaInput] = useState('');
     const [correct, setCorrect] = useState(null);
+    const [answer, setAnswer] = useState('');
 
     const _hiraganaToRomaji = (word) => {
         let translated = "";
@@ -43,18 +45,27 @@ const Main = () => {
         setKana(newKana);
     }
 
+    const _verifyKana = (e) => {
+        e.preventDefault();
+        const currentKana = _hiraganaToRomaji(kana);
+        setCorrect(kanaInput.toLowerCase() === currentKana);
+        setAnswer(`${kana} is ${currentKana} on hiragana`);
+        setKanaInput('');
+        _changeKana();
+    }
+
     useEffect(() => {
         _changeKana();
     }, []);
 
     return(
-        <Container>
+        <Container onSubmit={_verifyKana}>
             <Kana>{kana}</Kana>
             <Text>What is this letter in rõmaji?</Text>
-            <KanaInput />
+            <KanaInput value={kanaInput} onChange={e => setKanaInput(e.target.value)}/>
             {
                 correct !== null && 
-                <Answer correct={correct}><span>{correct ? 'Correct' : 'Wrong'}!</span> <b>あ</b> is <b>a</b> on hiragana</Answer>
+                <Answer correct={correct}><span>{correct ? 'Correct' : 'Wrong'}!</span> {answer}</Answer>
             }
         </Container>
     );
