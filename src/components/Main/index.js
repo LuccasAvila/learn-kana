@@ -15,13 +15,17 @@ const Main = () => {
     }
 
     const [kana, setKana] = useState(_randomKana());
+    const [correct, setCorrect] = useState(true);
 
     return(
         <Container>
             <Kana>{kana}</Kana>
             <Text>What is this letter in rõmaji?</Text>
             <KanaInput />
-            <Answer correct><span>Correct!</span> <b>あ</b> is <b>a</b> on hiragana</Answer>
+            {
+                correct !== null && 
+                <Answer correct={correct}><span>Correct!</span> <b>あ</b> is <b>a</b> on hiragana</Answer>
+            }
         </Container>
     );
 }
