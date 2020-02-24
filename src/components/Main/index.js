@@ -3,6 +3,8 @@ import {Container, Kana, Text, KanaInput, Answer} from './styles';
 import kanaList from '../../utils/kana';
 
 const Main = () => {
+    const [kana, setKana] = useState('');
+    const [correct, setCorrect] = useState(true);
 
     // Return a random kana
     const _randomKana = () => {
@@ -14,8 +16,22 @@ const Main = () => {
         return syllable[Math.floor(Math.random() * syllable.length)];
     }
 
-    const [kana, setKana] = useState(_randomKana());
-    const [correct, setCorrect] = useState(true);
+    // Change the kana
+    const _changeKana = () => {
+        const newKana = _randomKana();
+
+        // Don't repeat the previous kana
+        if(newKana === kana) {
+            _changeKana();
+            return;
+        }
+
+        setKana(newKana);
+    }
+
+    useEffect(() => {
+        _changeKana();
+    }, []);
 
     return(
         <Container>
