@@ -6,6 +6,20 @@ const Main = () => {
     const [kana, setKana] = useState('');
     const [correct, setCorrect] = useState(true);
 
+    const _hiraganaToRomaji = (word) => {
+        let translated = "";
+        const { hiragana } = kanaList;
+        for(let i = 0; i < word.length; i++) {
+            let syllabe = hiragana.find((item) => {
+                let y = item[word[i]];
+                return y;
+            });
+            translated += syllabe[word[i]];
+        }
+
+        return translated;
+    }
+
     // Return a random kana
     const _randomKana = () => {
         const { hiragana } = kanaList;
