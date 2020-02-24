@@ -4,7 +4,7 @@ import kanaList from '../../utils/kana';
 
 const Main = () => {
     const [kana, setKana] = useState('');
-    const [correct, setCorrect] = useState(true);
+    const [correct, setCorrect] = useState(null);
 
     const _hiraganaToRomaji = (word) => {
         let translated = "";
@@ -54,7 +54,7 @@ const Main = () => {
             <KanaInput />
             {
                 correct !== null && 
-                <Answer correct={correct}><span>Correct!</span> <b>あ</b> is <b>a</b> on hiragana</Answer>
+                <Answer correct={correct}><span>{correct ? 'Correct' : 'Wrong'}!</span> <b>あ</b> is <b>a</b> on hiragana</Answer>
             }
         </Container>
     );
