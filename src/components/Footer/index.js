@@ -4,6 +4,7 @@ import { ModalContext } from '../../context/ModalContext';
 
 import Modal from '../Modal';
 import HiraganaTable from '../Modal/HiraganaTable';
+import About from '../Modal/About';
 
 const Footer = () => {
   const context = useContext(ModalContext);
@@ -11,7 +12,13 @@ const Footer = () => {
   return (
     <Container>
       <ul>
-        <li>About</li>
+        <li
+          onClick={() => {
+            context.showModal(About);
+          }}
+        >
+          About
+        </li>
         <li
           onClick={() => {
             context.showModal(HiraganaTable);
