@@ -4,16 +4,19 @@ import Navbar from './components/Navbar';
 import Header from './components/Header';
 import Main from './components/Main';
 import Footer from './components/Footer';
+import ModalProvider from './context/ModalContext';
 
 const App = () => {
   return (
-    <AppContainer>
-      <Navbar />
-      <Header />
-      <Main />
-      <Footer />
-      <GlobalStyle />
-    </AppContainer>
+    <ModalProvider>
+      <AppContainer>
+        <Navbar />
+        <Header />
+        <Main />
+        <Footer />
+        <GlobalStyle />
+      </AppContainer>
+    </ModalProvider>
   );
 };
 
