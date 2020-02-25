@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/learn-kana/static/js/main.bca3f454.chunk.js",
-    "main.js.map": "/learn-kana/static/js/main.bca3f454.chunk.js.map",
+    "main.js": "/learn-kana/static/js/main.9e9fcaa2.chunk.js",
+    "main.js.map": "/learn-kana/static/js/main.9e9fcaa2.chunk.js.map",
     "runtime-main.js": "/learn-kana/static/js/runtime-main.5393ac6b.js",
     "runtime-main.js.map": "/learn-kana/static/js/runtime-main.5393ac6b.js.map",
     "static/js/2.dcc09092.chunk.js": "/learn-kana/static/js/2.dcc09092.chunk.js",
     "static/js/2.dcc09092.chunk.js.map": "/learn-kana/static/js/2.dcc09092.chunk.js.map",
     "index.html": "/learn-kana/index.html",
-    "precache-manifest.ce2351f0aae7a0d97dee6fa082759c57.js": "/learn-kana/precache-manifest.ce2351f0aae7a0d97dee6fa082759c57.js",
+    "precache-manifest.8d4004ac3cba711961ad6cafb5538bcb.js": "/learn-kana/precache-manifest.8d4004ac3cba711961ad6cafb5538bcb.js",
     "service-worker.js": "/learn-kana/service-worker.js",
     "static/js/2.dcc09092.chunk.js.LICENSE.txt": "/learn-kana/static/js/2.dcc09092.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.5393ac6b.js",
     "static/js/2.dcc09092.chunk.js",
-    "static/js/main.bca3f454.chunk.js"
+    "static/js/main.9e9fcaa2.chunk.js"
   ]
 }
