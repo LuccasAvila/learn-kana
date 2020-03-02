@@ -1,4 +1,4 @@
-import React, { useRef, useContext, useEffect } from 'react';
+import React, { useRef, useContext } from 'react';
 import { Container, ModalContent, Close } from './styles';
 import { ModalContext } from '../../context/ModalContext';
 
