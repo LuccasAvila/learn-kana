@@ -13,7 +13,6 @@ const Main = () => {
 
   const _kanaToRomaji = (word, type = 'hiragana') => {
     let translated = '';
-    const kana = kanaList;
     const kanaSelected = kanaList[type];
     for (let i = 0; i < word.length; i++) {
       let syllabe = kanaSelected.find(item => {
@@ -27,7 +26,7 @@ const Main = () => {
   };
 
   // Return a random kana
-  const _randomKana = () => {
+  const _randomKana = useCallback(() => {
     const kana = kanaList;
     const kanaSelected = context.hiraganaSelected
       ? kana['hiragana']
@@ -38,7 +37,7 @@ const Main = () => {
     const syllable = Object.keys(syllabary);
 
     return syllable[Math.floor(Math.random() * syllable.length)];
-  };
+  }, [context]);
 
   // Change the kana
   const _changeKana = useCallback(() => {
@@ -46,7 +45,7 @@ const Main = () => {
 
     // Don't repeat the previous kana
     setKana(oldKana => (oldKana !== newKana ? newKana : _changeKana()));
-  }, [context]);
+  }, [_randomKana]);
 
   const _verifyKana = e => {
     e.preventDefault();
