@@ -3,6 +3,8 @@ import styled from 'styled-components';
 export const Container = styled.div`
   & {
     padding: 24px 0;
+    display: flex;
+    justify-content: space-between;
   }
 
   p {
@@ -23,4 +25,16 @@ export const Sun = styled.div`
   height: 16px;
   border-radius: 8px;
   background: #cc0000;
+`;
+
+export const ToogleButton = styled.button`
+  background: none;
+  border: none;
+  padding: 4px 8px;
+  color: #cc0000;
+  font-weight: bold;
+
+  &:hover {
+    cursor: pointer;
+  }
 `;
