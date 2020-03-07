@@ -44,7 +44,7 @@
 
 ![Learn Kana][product-screenshot]
 
-This project aims to help people who are trying to memorize hiragana and katakana (soon), using a technique similar to the use of flashcards. Basically the system shows a kana and the user has to try to remember and type his Romãji.
+This project aims to help people who are trying to memorize hiragana and katakana, using a technique similar to the use of flashcards. Basically the system shows a kana and the user has to try to remember and type his Romãji.
 
 ### Built With
 
