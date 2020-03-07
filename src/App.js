@@ -5,15 +5,18 @@ import Header from './components/Header';
 import Main from './components/Main';
 import Footer from './components/Footer';
 import ModalProvider from './context/ModalContext';
+import KanaProvider from './context/KanaContext';
 
 const App = () => {
   return (
     <ModalProvider>
       <AppContainer>
-        <Navbar />
-        <Header />
-        <Main />
-        <Footer />
+        <KanaProvider>
+          <Navbar />
+          <Header />
+          <Main />
+          <Footer />
+        </KanaProvider>
         <GlobalStyle />
       </AppContainer>
     </ModalProvider>
