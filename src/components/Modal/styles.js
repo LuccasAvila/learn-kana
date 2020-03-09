@@ -22,6 +22,10 @@ export const ModalContent = styled.div`
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
   padding: 32px;
   position: relative;
+
+  @media (max-width: 720px) {
+    max-width: 80%;
+  }
 `;
 
 export const Close = styled.div`

@@ -16,6 +16,10 @@ export const Container = styled.div`
   .logo {
     display: flex;
     align-items: center;
+
+    @media (max-width: 720px) {
+      margin-left: 16px;
+    }
   }
 `;
 

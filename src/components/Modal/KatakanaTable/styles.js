@@ -28,4 +28,8 @@ export const Table = styled.table`
   td:nth-child(2n + 1) {
     background: #f1f1f1;
   }
+
+  @media (max-width: 720px) {
+    font-size: 1.5rem;
+  }
 `;
